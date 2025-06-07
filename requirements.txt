@@ -1,0 +1,44 @@
+# ===== DEPENDENCIAS PRINCIPALES =====
+mkdocs>=1.6.0
+mkdocs-material>=9.6.0
+
+# ===== PLUGINS ESENCIALES =====
+mkdocs-awesome-pages-plugin>=2.10.0
+mkdocs-git-revision-date-localized-plugin>=1.4.0
+mkdocs-minify-plugin>=0.8.0
+mkdocs-redirects>=1.2.0
+
+# ===== EXTENSIONES DE MARKDOWN =====
+pymdown-extensions>=10.15
+
+# ===== DEPENDENCIAS ADICIONALES =====
+# Para fechas y localización
+pytz>=2025.1
+
+# Para Git integration
+GitPython>=3.1.44
+
+# Para minificación
+htmlmin2>=0.1.13
+jsmin>=3.0.1
+csscompressor>=0.9.5
+
+# ===== HERRAMIENTAS DE DESARROLLO =====
+# Para linting y formato (opcional)
+# flake8>=6.0.0
+# black>=23.0.0
+
+# Para testing (opcional)
+# pytest>=7.0.0
+
+# ===== NOTAS =====
+# Para instalar todas las dependencias:
+# pip install -r requirements.txt
+#
+# Para crear un entorno virtual:
+# python -m venv venv
+# venv\Scripts\activate (Windows)
+# source venv/bin/activate (macOS/Linux)
+#
+# Para actualizar dependencias:
+# pip install --upgrade -r requirements.txt
