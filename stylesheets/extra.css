@@ -1,0 +1,351 @@
+/* ===== ESTILOS PERSONALIZADOS PARA MKDOCS MATERIAL ===== */
+
+/* Variables CSS personalizadas */
+:root {
+  --md-primary-fg-color: #1976d2;
+  --md-primary-fg-color--light: #42a5f5;
+  --md-primary-fg-color--dark: #1565c0;
+  --md-accent-fg-color: #1976d2;
+
+  /* Colores personalizados */
+  --custom-blue: #2196f3;
+  --custom-green: #4caf50;
+  --custom-orange: #ff9800;
+  --custom-red: #f44336;
+  --custom-purple: #9c27b0;
+
+  /* Espaciado */
+  --custom-spacing-sm: 0.5rem;
+  --custom-spacing-md: 1rem;
+  --custom-spacing-lg: 1.5rem;
+  --custom-spacing-xl: 2rem;
+}
+
+/* ===== TIPOGRAFÍA ===== */
+
+/* Mejoras en la legibilidad */
+.md-typeset {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Títulos con mejor espaciado */
+.md-typeset h1 {
+  margin-bottom: var(--custom-spacing-lg);
+  font-weight: 600;
+}
+
+.md-typeset h2 {
+  margin-top: var(--custom-spacing-xl);
+  margin-bottom: var(--custom-spacing-md);
+  font-weight: 500;
+}
+
+.md-typeset h3 {
+  margin-top: var(--custom-spacing-lg);
+  margin-bottom: var(--custom-spacing-sm);
+  font-weight: 500;
+}
+
+/* ===== BLOQUES DE CÓDIGO ===== */
+
+/* Código inline mejorado */
+.md-typeset code:not(.highlight code) {
+  background-color: var(--md-code-bg-color);
+  border-radius: 0.3rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Bloques de código con mejor estilo */
+.md-typeset .highlight {
+  margin: var(--custom-spacing-md) 0;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de bloques de código */
+.md-typeset .highlight .filename {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ===== ADMONITIONS PERSONALIZADOS ===== */
+
+/* Mejora visual de admonitions */
+.md-typeset .admonition {
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: var(--custom-spacing-md) 0;
+  overflow: hidden;
+}
+
+/* Colores personalizados para admonitions */
+.md-typeset .admonition.tip {
+  border-left: 4px solid var(--custom-green);
+}
+
+.md-typeset .admonition.warning {
+  border-left: 4px solid var(--custom-orange);
+}
+
+.md-typeset .admonition.danger {
+  border-left: 4px solid var(--custom-red);
+}
+
+.md-typeset .admonition.info {
+  border-left: 4px solid var(--custom-blue);
+}
+
+.md-typeset .admonition.example {
+  border-left: 4px solid var(--custom-purple);
+}
+
+/* ===== NAVEGACIÓN ===== */
+
+/* Mejoras en la navegación principal */
+.md-tabs__item {
+  font-weight: 500;
+}
+
+.md-tabs__link--active {
+  font-weight: 600;
+}
+
+/* Sidebar mejorado */
+.md-nav__item--active > .md-nav__link {
+  font-weight: 600;
+  color: var(--md-primary-fg-color);
+}
+
+/* ===== TABLAS ===== */
+
+/* Tablas más elegantes */
+.md-typeset table:not([class]) {
+  border-radius: 0.4rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: var(--custom-spacing-md) 0;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  font-weight: 600;
+  text-align: left;
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ===== BOTONES Y ENLACES ===== */
+
+/* Enlaces con mejor estilo */
+.md-typeset a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.md-typeset a:hover {
+  border-bottom-color: var(--md-accent-fg-color);
+}
+
+/* Botones personalizados */
+.custom-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 0.3rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.custom-button:hover {
+  background-color: var(--md-primary-fg-color--dark);
+  color: white;
+}
+
+/* ===== UTILIDADES ===== */
+
+/* Clases de utilidad para espaciado */
+.mt-1 {
+  margin-top: var(--custom-spacing-sm) !important;
+}
+.mt-2 {
+  margin-top: var(--custom-spacing-md) !important;
+}
+.mt-3 {
+  margin-top: var(--custom-spacing-lg) !important;
+}
+.mt-4 {
+  margin-top: var(--custom-spacing-xl) !important;
+}
+
+.mb-1 {
+  margin-bottom: var(--custom-spacing-sm) !important;
+}
+.mb-2 {
+  margin-bottom: var(--custom-spacing-md) !important;
+}
+.mb-3 {
+  margin-bottom: var(--custom-spacing-lg) !important;
+}
+.mb-4 {
+  margin-bottom: var(--custom-spacing-xl) !important;
+}
+
+/* Clases de utilidad para texto */
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-bold {
+  font-weight: 600 !important;
+}
+.text-muted {
+  opacity: 0.7 !important;
+}
+
+/* Clases de utilidad para colores */
+.text-primary {
+  color: var(--md-primary-fg-color) !important;
+}
+.text-success {
+  color: var(--custom-green) !important;
+}
+.text-warning {
+  color: var(--custom-orange) !important;
+}
+.text-danger {
+  color: var(--custom-red) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Mejoras para móviles */
+@media screen and (max-width: 768px) {
+  .md-typeset {
+    font-size: 0.9rem;
+  }
+
+  .md-typeset h1 {
+    font-size: 1.6rem;
+  }
+
+  .md-typeset h2 {
+    font-size: 1.3rem;
+  }
+
+  .md-typeset .highlight {
+    margin: var(--custom-spacing-sm) -1rem;
+    border-radius: 0;
+  }
+}
+
+/* ===== ANIMACIONES ===== */
+
+/* Transiciones suaves */
+.md-nav__link,
+.md-tabs__link,
+.md-typeset a,
+.custom-button {
+  transition: all 0.2s ease;
+}
+
+/* Fade in para contenido */
+.md-content {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+/* Estilos para impresión */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer {
+    display: none !important;
+  }
+
+  .md-main__inner {
+    margin: 0 !important;
+  }
+
+  .md-content {
+    max-width: none !important;
+  }
+}
+
+/* ===== TEMA OSCURO ===== */
+
+/* Mejoras específicas para tema oscuro */
+[data-md-color-scheme="slate"] {
+  --custom-border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) td {
+  border-bottom-color: var(--custom-border-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== ACCESIBILIDAD ===== */
+
+/* Mejoras de accesibilidad */
+.md-typeset a:focus,
+.custom-button:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 2px;
+}
+
+/* Alto contraste para usuarios con necesidades especiales */
+@media (prefers-contrast: high) {
+  .md-typeset code:not(.highlight code) {
+    border: 2px solid var(--md-primary-fg-color);
+  }
+}
+
+/* Reducir movimiento para usuarios sensibles */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
