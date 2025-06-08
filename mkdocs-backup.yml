@@ -1,0 +1,167 @@
+site_name: Documentación Profesional
+site_description: Una documentación profesional construida con MkDocs
+site_author: Tu Nombre
+site_url: https://your-domain.com/
+
+# Repository
+repo_name: your-repo/docs
+repo_url: https://github.com/your-repo/docs
+edit_uri: edit/main/docs/
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - search.share
+    - toc.follow
+    - toc.integrate
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  font:
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    logo: material/library
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
+# Plugins
+plugins:
+  - search:
+      lang: es
+  - awesome-pages
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+      locale: es
+      fallback_to_build_date: true
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      title: En esta página
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Extra
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/your-username
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/your-username
+  generator: false
+
+# Navigation
+nav:
+  - Inicio: index.md
+  - Guía de Usuario:
+      - user-guide/index.md
+      - Introducción: user-guide/introduction.md
+      - Instalación: user-guide/installation.md
+      - Configuración: user-guide/configuration.md
+  - Desarrollo:
+      - development/index.md
+      - Arquitectura: development/architecture.md
+      - API Reference: development/api-reference.md
+      - Contribuir: development/contributing.md
+  - Ejemplos:
+      - examples/index.md
+      - Ejemplos Básicos: examples/basic-examples.md
+      - Casos de Uso: examples/use-cases.md
+  - FAQ: faq.md
+  - Changelog: changelog.md
+
+# Additional files
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
